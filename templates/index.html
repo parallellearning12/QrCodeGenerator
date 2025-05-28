@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styel.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <form method="POST">
+            <label>QR Code Width (mm):</label>
+            <input type="number" step="0.1" name="width" required placeholder="e.g. 55">
+
+            <label>QR Code Height (mm):</label>
+            <input type="number" step="0.1" name="height" required placeholder="e.g. 65">
+
+            <label>Start Number:</label>
+            <input type="number" name="start" required placeholder="e.g. 1">
+
+            <label>End Number:</label>
+            <input type="number" name="end" required placeholder="e.g. 5">
+
+            <button type="submit">Generate QR Codes</button>
+        </form>
+    </div>
+</body>
+</html>
+

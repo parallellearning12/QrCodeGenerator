@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generated</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styel.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Success!</h1>
+        <p style="text-align: center; font-size: 18px;">{{ count }} QR Code(s) generated successfully.</p>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/" style="text-decoration: none;">
+                <button>Generate More QR Codes</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
