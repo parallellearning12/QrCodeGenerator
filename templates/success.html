@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <title>QR Code Generated</title>
@@ -11,6 +11,81 @@
         <div style="text-align: center; margin-top: 30px;">
             <a href="/" style="text-decoration: none;">
                 <button>Generate More QR Codes</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generated</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #123773;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        button {
+            background-color: #123773;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0d2a5d;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a + a {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Success!</h1>
+        <p>{{ count }} QR Code(s) generated successfully.</p>
+
+        <div>
+            <a href="{{ url_for('download', filename=filename) }}">
+                <button>Download QR Codes</button>
+            </a>
+            <a href="/">
+                <button>Generate More</button>
             </a>
         </div>
     </div>
